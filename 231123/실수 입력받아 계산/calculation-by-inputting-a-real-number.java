@@ -7,6 +7,6 @@ public class Main {
         double a = input.nextDouble();
         double b = input.nextDouble();
 
-        System.out.print(a + b);
+        System.out.printf("%.2f", a + b);
     }
 }
