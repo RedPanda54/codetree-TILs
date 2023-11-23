@@ -5,6 +5,6 @@ public class Main {
         Scanner input = new Scanner(System.in);
         double n = input.nextDouble();
         double result = n*30.48;
-        System.out.printf("%.2f", result);
+        System.out.printf("%.1f", result);
     }
 }
