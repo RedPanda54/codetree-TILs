@@ -10,6 +10,6 @@ public class Main {
         s = t;
         t = temp;
         System.out.println(s);
-        System.out.pritnln(t);
+        System.out.println(t);
     }
 }
