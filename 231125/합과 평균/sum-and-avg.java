@@ -6,7 +6,7 @@ public class Main {
         int a = in.nextInt();
         int b = in.nextInt();
         int sum = a+b;
-        double average = sum/2;
+        double average = ((double)sum)/2;
         System.out.printf(sum + " " + "%.1f", average);
     }
 }
