@@ -7,7 +7,7 @@ public class Main {
         width += 8;
 
         int height = in.nextInt();
-        height *= 2;
+        height *= 3;
 
         System.out.println(width);
         System.out.println(height);
