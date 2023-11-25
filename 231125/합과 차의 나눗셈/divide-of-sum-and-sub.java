@@ -5,8 +5,8 @@ public class Main {
         Scanner in = new Scanner(System.in);
         int a = in.nextInt();
         int b = in.nextInt();
-        int sum = a+b;
-        int minus = a-b;
+        double sum = a+b;
+        double minus = a-b;
         double result = sum/minus;
         System.out.printf("%.2f", result);
     }
