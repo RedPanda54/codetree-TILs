@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        double height = in.nextInt();
+        int height = in.nextInt();
         int weight = in.nextInt();
-        height = height/100;
+        weight = (weight*100)*100;
 
-        double BMI = weight/height;
+        int BMI = weight/(height*height);
         System.out.println(BMI);
 
         if (BMI >= 25) {
