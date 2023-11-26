@@ -6,7 +6,7 @@ public class Main {
         int a = input.nextInt();
         int b = input.nextInt();
 
-        int max = a > b ? a : b
+        int max = a > b ? a : b;
         System.out.println(max);
     }
 }
