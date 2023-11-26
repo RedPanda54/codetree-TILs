@@ -5,7 +5,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         int a = input.nextInt();
 
-        String pri = a == 1 ? t : f;
+        String pri = a == 1 ? "t" : "f";
         System.out.println(pri);
     }
 }
