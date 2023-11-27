@@ -2,25 +2,26 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String str = input.next();
-        if (str == "S") {
+        Scanner sc = new Scanner(System.in);
+
+        // 변수 선언
+        char a;
+        
+        // 입력
+        a = sc.next().charAt(0);
+        
+        // 출력
+        if(a == 'S')
             System.out.println("Superior");
-        }
-        else if (str == "A") {
+        else if(a == 'A')
             System.out.println("Excellent");
-        }
-        else if (str == "B") {
+        else if(a == 'B')
             System.out.println("Good");
-        }
-        else if (str == "C") {
+        else if(a == 'C')
             System.out.println("Usually");
-        }
-        else if (str == "D") {
+        else if(a == 'D')
             System.out.println("Effort");
-        }
-        else {
+        else
             System.out.println("Failure");
-        }
     }
 }
