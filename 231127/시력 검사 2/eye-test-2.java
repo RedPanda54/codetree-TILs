@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        double vision = input.nextInt();
+        double vision = input.nextDouble();
         if (vision >= 1.0) {
             System.out.println("High");
         }
