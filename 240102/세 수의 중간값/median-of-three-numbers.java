@@ -7,7 +7,7 @@ public class Main {
         int b = input.nextInt();
         int c = input.nextInt();
 
-        if (b >= a && b <= c) {
+        if (b > a && b < c) {
             System.out.println(1);
         }
         else {
