@@ -8,13 +8,13 @@ public class Main {
         if (a >= 3 && a < 6) {
             System.out.println("Spring");
         }
-        else if (a >= 6 && a < 9) {
+        if (a >= 6 && a < 9) {
             System.out.println("Summer");
         }
-        else if (a >= 10 && a < 13) {
+        if (a >= 10 && a < 13) {
             System.out.println("Fall");
         }
-        else {
+        if ((a >= 1 && a < 3) || a == 12) {
             System.out.println("Winter");
         }
     }
