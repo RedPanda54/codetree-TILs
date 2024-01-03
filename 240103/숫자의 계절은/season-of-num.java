@@ -5,17 +5,13 @@ public class Main {
         Scanner input = new Scanner(System.in);
         int a = input.nextInt();
 
-        if (a >= 3 && a < 6) {
-            System.out.println("Spring");
-        }
-        if (a >= 6 && a < 9) {
-            System.out.println("Summer");
-        }
-        if (a >= 10 && a < 13) {
-            System.out.println("Fall");
-        }
-        if ((a >= 1 && a < 3) || a == 12) {
+        if(m >= 12 || m <= 2)
             System.out.println("Winter");
-        }
+        else if(m <= 5)
+            System.out.println("Spring");
+        else if(m <= 8)
+            System.out.println("Summer");
+        else
+            System.out.println("Fall");
     }
 }
