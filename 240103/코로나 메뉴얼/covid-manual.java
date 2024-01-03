@@ -3,24 +3,24 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String cool = input.next();
-        int temp = input.nextInt();
+        String[] cool = new String[3];
+        int[] temp = new int[3];
+        int count = 0;
+
+        for (int i=0; i<temp.length; i++) {
+            cool[i] = input.next();
+            temp[i] = input.nextInt();
+        }
+        for (int i=0; i<temp.length; i++) {
+            if (cool[i].equals("Y")) {
+                if (temp[i] >= 37)
+                    count += 1;
+            }
+        }
         
-        if (cool.equals("Y")) {
-            if (temp >= 37) {
-                System.out.println("A");
-            }
-            else {
-                System.out.println("C");
-            }
-        }
-        else {
-            if (temp >= 37) {
-                System.out.println("B");
-            }
-            else {
-                System.out.println("D");
-            }
-        }
+        if (count >= 2) 
+            System.out.println("E");
+        else 
+            System.out.println("N");
     }
 }
