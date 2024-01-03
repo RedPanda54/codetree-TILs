@@ -4,10 +4,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int age1 = input.nextInt();
-        String gen1 = input.nextLine();
+        String gen1 = input.next();
 
         int age2 = input.nextInt();
-        String gen2 = input.nextLine();
+        String gen2 = input.next();
 
         if ((age1 >= 19 && gen1.equals("M")) || (age2 >= 19 && gen2.equals("M"))) {
             System.out.println(1);
