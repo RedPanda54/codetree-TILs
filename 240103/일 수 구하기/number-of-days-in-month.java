@@ -18,7 +18,7 @@ public class Main {
             case 4:
             case 6:
             case 9:
-            case 22:
+            case 11:
                 System.out.println(30);
                 break;
             case 2:
