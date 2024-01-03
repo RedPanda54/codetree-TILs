@@ -7,10 +7,12 @@ public class Main {
 
         if (y%4 == 0) {
             if (y%100 == 0) {
-                System.out.println("false");
-            }
-            else if (y%400 == 0) {
-                System.out.println("true");
+                if (y%400 == 0) {
+                    System.out.println("true");
+                }
+                else {
+                    System.out.println("false");
+                }
             }
             else {
                 System.out.println("true");
