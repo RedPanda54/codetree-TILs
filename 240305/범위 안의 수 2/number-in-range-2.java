@@ -18,7 +18,7 @@ public class Main {
             iterator++;
         }
         
-        average = sum / count;
+        average = (double)sum / count;
         System.out.print(sum + " ");
         System.out.printf("%.1f", average);
     }
