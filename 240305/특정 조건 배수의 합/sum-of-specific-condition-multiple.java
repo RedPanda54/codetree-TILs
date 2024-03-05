@@ -10,22 +10,26 @@ public class Main {
         int sum = 0;
         //double average = 0.0;
 
-        if (a <= b) {
+        if (a < b) {
             for (int i = a; i <= b; i++) {
                 if (i % 5 == 0) {
                     //cnt++;
                     sum += i;
                 }
-            }    
-        } else {
+            }
+        } else if (a > b) {
             for (int i = b; i >= a; i--) {
                 if (i % 5 == 0) {
                     //cnt++;
                     sum += i;
                 }
             }
+        } else {
+            if (a % 5 == 0) {
+                sum += a;
+            }
         }
-        
+
         //average = (double) sum / cnt;
 
         System.out.print(sum);
