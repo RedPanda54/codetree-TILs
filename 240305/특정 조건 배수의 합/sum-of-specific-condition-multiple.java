@@ -10,23 +10,16 @@ public class Main {
         int sum = 0;
         //double average = 0.0;
 
-        if (a < b) {
-            for (int i = a; i <= b; i++) {
-                if (i % 5 == 0) {
-                    //cnt++;
+        if(a <= b) {
+            for(int i = a; i <= b; i++) {
+                if(i % 5 == 0)
                     sum += i;
-                }
             }
-        } else if (a > b) {
-            for (int i = b; i >= a; i--) {
-                if (i % 5 == 0) {
-                    //cnt++;
+        }
+        else {
+            for(int i = b; i <= a; i++) {
+                if(i % 5 == 0)
                     sum += i;
-                }
-            }
-        } else {
-            if (a % 5 == 0) {
-                sum += a;
             }
         }
 
