@@ -3,7 +3,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int iterator = 1;
+        int iterator = 0;
         int count = 0;
         int sum = 0;
         double average = 0.0;
