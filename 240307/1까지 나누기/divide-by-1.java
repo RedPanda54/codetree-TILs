@@ -7,7 +7,7 @@ public class Main {
         double quotient = n;
         int count = 0;
 
-        for (int i = 1; i <= quotient; i++) {
+        for (int i = 1; i <= 100; i++) {
             quotient = (double) (quotient / i);
             count++;
 
