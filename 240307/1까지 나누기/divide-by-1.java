@@ -7,14 +7,16 @@ public class Main {
         double quotient = n;
         int count = 0;
 
-        for (int i = 1; i <= 100; i++) {
-            quotient = (double) (quotient / i);
+        for (int i = 1; i <= n; i++) {
+            quotient /= i;
             count++;
+            //System.out.println(quotient);
 
             if (quotient <= 1) {
-                System.out.print(count);
                 break;
             }
         }
+
+        System.out.print(count);
     }
 }
