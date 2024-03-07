@@ -5,16 +5,13 @@ public class Main {
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
         int sum = 0;
-        int a = 0;
 
         for (int i = 1; i <= 100; i++) {
+            sum += i;
             if (sum >= n) {
-                a = i-1;
+                System.out.print(i);
                 break;
             }
-            sum += i;
         }
-
-        System.out.print(a);
     }
 }
