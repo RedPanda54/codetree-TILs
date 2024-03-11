@@ -13,11 +13,11 @@ public class Main {
                 satisfied = true;
             }
         }
-        
+
         if (satisfied == true) {
             System.out.print("YES");
         } else {
-            System.out.print("No");
+            System.out.print("NO");
         }
     }
 }
