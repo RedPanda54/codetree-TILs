@@ -6,7 +6,7 @@ public class Main {
         int n = input.nextInt();
         boolean satisfied = false;
 
-        for (int i = 1; i < n / 2; i++) {
+        for (int i = 2; i < n / 2; i++) {
             if (n % i == 0) {
                 satisfied = true;
             }
