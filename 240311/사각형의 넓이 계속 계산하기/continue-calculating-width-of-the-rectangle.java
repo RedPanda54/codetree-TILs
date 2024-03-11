@@ -12,9 +12,8 @@ public class Main {
             height = input.nextInt();
             a = input.next();
             System.out.println(width * height);
-            input.nextLine();
 
-            if (a == 'C')
+            if (a.equals("C"))
                 break;
         }
     }
