@@ -9,15 +9,18 @@ public class Main {
         boolean satisfied = false;
 
         for (int i = a; i <= b; i++) {
-            if (i % c != 0) {
+            if (i % c == 0) {
                 satisfied = true;
+                break;
+            } else {
+                satisfied = false;
             }
         }
 
         if (satisfied) {
-            System.out.print("YES");
-        } else {
             System.out.print("NO");
+        } else {
+            System.out.print("YES");
         }
     }
 }
