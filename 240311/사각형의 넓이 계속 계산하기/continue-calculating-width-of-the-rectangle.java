@@ -7,12 +7,15 @@ public class Main {
         int height;
         String a = "A";
 
-        while (!(a.equals("C"))) {
+        while (true) {
             width = input.nextInt();
             height = input.nextInt();
             a = input.next();
             System.out.println(width * height);
             input.nextLine();
+
+            if (a == 'C')
+                break;
         }
     }
 }
