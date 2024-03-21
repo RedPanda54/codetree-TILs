@@ -1,8 +1,11 @@
-def is_magic_number(number):
-    return (number // 10) == 3 or (number // 10) == 6 or (number // 10) == 9 or (number % 10) == 3 or (number % 10) == 6 or (number % 10) == 9
+def is_ten(number):
+    return (number // 10) == 3 or (number // 10) == 6 or (number // 10) == 9
+
+def is_one(number):
+    return (number % 10) == 3 or (number % 10) == 6 or (number % 10) == 9
 
 def is_three_num(number):
-    return number % 3 == 0 or is_magic_number(number)
+    return number % 3 == 0 or is_ten(number) or is_one(number)
 
 a, b = map(int, input().strip().split())
 count = 0
