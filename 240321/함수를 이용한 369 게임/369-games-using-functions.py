@@ -1,22 +1,20 @@
-def is_magic_num(number):
-    one_num = number % 10
-    if one_num == 3 or one_num == 6 or one_num == 9:
-        return True
-
-    for _ in range(6):
-        number = number // 10
-        one_num = number % 10
-        if one_num == 3 or one_num == 6 or one_num == 9:
+def contains_369(n):
+    while n > 0:
+        if n % 10 == 3 or n % 10 == 6 or n % 10 == 9:
             return True
+        
+        n //= 10
 
-def is_three_num(number):
-    return number % 3 == 0 or is_magic_num(number)
+    return False
+
+def is_369_number(n):
+    return contains_369(n) or (n % 3 == 0)
 
 a, b = map(int, input().strip().split())
 count = 0
 
 for i in range(a, b+1):
-    if is_three_num(i):
+    if is_369_number(i):
         count += 1
 
 print(count)
