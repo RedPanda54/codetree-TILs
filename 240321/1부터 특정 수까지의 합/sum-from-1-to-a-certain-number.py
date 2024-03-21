@@ -3,7 +3,7 @@ def calculate(n):
     for i in range(1, n+1):
         sum += i
 
-    return int(sum/10)
+    return sum//10
 
 n = int(input().strip())
 print(calculate(n))
