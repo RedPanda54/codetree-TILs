@@ -1,8 +1,10 @@
 def prime(a,b):
     p = []
-    is_prime = True
     for n in range(a, b+1):
-        if a == 1: continue
+        is_prime = True
+        if a == 1:
+            is_prime = False
+
         for i in range(2, n):
             if n % i == 0:
                 is_prime = False
