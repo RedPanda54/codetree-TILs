@@ -1,39 +1,45 @@
 from collections import deque
 
-n, m = map(int, input().split())
+n, m = tuple(map(int, input().split()))
+a = [list(map(int, input().split())) for _ in range(n)]
 
-MAX = 10000
-grid = [[-MAX] * (m+2) for _ in range(n+2)]
-
-for i in range(1, n+1):
-    temp = list(map(int, input().split()))
-    for j in range(1, m+1):
-        if temp[j-1] == '1':
-            grid[i][j] = MAX
-
-visited = [[False] * (m+2) for _ in range(n+2)]
-for i in range(1, n+1):
-    for j in range(1, m+1):
-        if grid[i][j] == MAX:
-            visited[i][j] = True
-
-visited[1][1] = True
+visited = [[False for _ in range(m)]for _ in range(n)]
 
 q = deque()
+
+# 주어진 위치가 격자를 벗어나는지 여부를 반환합니다.
+def in_range(x, y):
+    return 0 <= x and x < n and 0 <= y and y < m
+
+# 주어진 위치로 이동할 수 있는지 여부를 확인합니다.
+def can_go(x, y):
+    return in_range(x, y) and a[x][y] and not visited[x][y]
+
+def bfs():
+    # queue에 남은 것이 없을때까지 반복
+    while q:
+        # queue에서 가장 먼저 들어온 원소를 뺍니다.
+        x, y = q.popleft()
+        
+        # 4가지 이동 방향
+        directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+        for dx, dy in directions:
+            now_row, now_col = x + dx, y + dy
+        
+            # 아직 방문한 적이 없으면서 갈 수 있는 곳이라면
+            # 새로 queue에 넣어주고 방문 여부를 표시해줍니다.
+            if can_go(now_row, now_col):
+                q.append((now_row, now_col))
+                visited[now_row][now_col] = True
+
+                
+# bfs를 이용해 최소 이동 횟수를 구합니다.
+# 시작점을 queue에 넣고 시작합니다.
 q.append((0, 0))
+visited[0][0] = True
 
-# 4가지 이동 방향
-directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+bfs()
 
-while len(q) > 0 and visited[n][m] == False:
-    now_row, now_col = q.popleft()
-
-    for dr, dc in directions:
-        r, c = now_row, now_col
-        r += dr
-        c += dc
-        if visited[r][c] == False:
-            visited[r][c] = True
-            q.append((r, c)) 
-
-print(1 if visited[n][m] else 0)
+# 우측 하단을 방문한 적이 있는지 여부를 출력합니다.
+answer = 1 if visited[n - 1][m - 1] else 0
+print(answer)
