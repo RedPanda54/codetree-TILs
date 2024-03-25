@@ -1,12 +1,10 @@
 def is_leap_year(y):
-    answer = True
-    if y % 4 == 0:
-        answer = True
-    elif y % 100 == 0 and y % 400 != 0:
-        answer = False
-    else:
-        answer = False
-    return answer
+    if y % 4 != 0:
+        return False
+    if y % 100 == 0 and y % 400 != 0:
+        return False
+
+    return True
 
 y = int(input().strip())
 if is_leap_year:
