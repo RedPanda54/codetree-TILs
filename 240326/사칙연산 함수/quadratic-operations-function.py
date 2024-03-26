@@ -5,7 +5,7 @@ def minus(a, c):
     return a-c
 
 def div(a, c):
-    return a/c
+    return a//c
 
 def mul(a, c):
     return a*c
