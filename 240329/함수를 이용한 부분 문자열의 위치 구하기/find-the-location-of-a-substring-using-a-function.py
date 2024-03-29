@@ -1,4 +1,4 @@
-def find_index(n, m):
+def find_index():
     if n.find(m) != -1:
         return n.find(m)
     return -1
@@ -6,4 +6,4 @@ def find_index(n, m):
 n = input()
 m = input()
 
-print(find_index(n, m))
+print(find_index())
