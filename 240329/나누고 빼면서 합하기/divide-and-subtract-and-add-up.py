@@ -1,4 +1,4 @@
-def solution(A, m):
+def solution():
     global m
 
     total_sum = 0
@@ -16,4 +16,4 @@ def solution(A, m):
 n, m = map(int, input().split())
 A = [0] + list(map(int, input().split()))
 
-print(solution(A, m))
+print(solution())
