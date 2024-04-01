@@ -1,4 +1,6 @@
-str = input().strip()
-list_str = list(str).sort()
+str = input()
+list_str = list(str)
 
-print(''.join(list_str))
+sorted_str = list_str.sort()
+sorted_str = ''.join(list_str)
+print(sorted_str)
