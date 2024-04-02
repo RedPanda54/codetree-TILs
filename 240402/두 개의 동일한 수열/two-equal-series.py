@@ -9,5 +9,5 @@ for i in range(n):
     if A[i] != B[i]:
         print("No")
         break
-
-print("Yes")
+    if i == n-1 and A[i] == B[i]:
+        print("Yes")
