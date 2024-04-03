@@ -1,0 +1,13 @@
+class User:
+    def __init__(self, user_id="codetree", user_level=10):
+        self.user_id = user_id
+        self.user_level = user_level
+
+user_id, user_level = input().split()
+user_level = int(user_level)
+
+user1 = User()
+user2 = User(user_id, user_level)
+
+print(f"user {user1.user_id} lv {user1.user_level}")
+print(f"user {user2.user_id} lv {user2.user_level}")
