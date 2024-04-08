@@ -9,11 +9,11 @@ for _ in range(n):
     dx = int(dx)
     
     if shift == 'L':
-        for i in range(now_position, now_position - dx, -1):
+        for i in range(now_position, now_position - (dx+1), -1):
             count[i] += 1
         now_position -= dx
     else:
-        for i in range(now_position, now_position + dx, 1):
+        for i in range(now_position, now_position + (dx+1), 1):
             count[i] += 1
         now_position += dx
     
