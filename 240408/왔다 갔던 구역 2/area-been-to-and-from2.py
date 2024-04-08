@@ -9,13 +9,13 @@ for _ in range(n):
     dx = int(dx)
     
     if shift == 'L':
-        for i in range(now_position, now_position - (dx+1), -1):
+        for i in range(now_position, now_position - dx, -1):
             count[i] += 1
-        now_position -= dx
+            now_position -= 1
     else:
-        for i in range(now_position, now_position + (dx+1), 1):
+        for i in range(now_position, now_position + dx, 1):
             count[i] += 1
-        now_position += dx
+            now_position += 1
     
 result = 0
 for cnt in count:
