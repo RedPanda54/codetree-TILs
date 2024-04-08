@@ -9,16 +9,16 @@ for _ in range(n):
     dx = int(dx)
     
     if shift == 'L':
-        for i in range(now_position, now_position - dx, -1):
+        for i in range(dx):
             count[i] += 1
-            now_position -= 1
+        now_position -= dx
     else:
-        for i in range(now_position, now_position + dx, 1):
+        for i in range(dx):
             count[i] += 1
-            now_position += 1
+        now_position += dx
     
 result = 0
-for cnt in count:
-    if cnt > 1:
+for i in range(len(count)):
+    if count[i] > 1:
         result += 1
 print(result)
