@@ -17,4 +17,8 @@ for _ in range(n):
             count[i] += 1
         now_position += dx
     
-print(count.count(2))
+result = 0
+for cnt in count:
+    if cnt > 1:
+        result += 1
+print(result)
