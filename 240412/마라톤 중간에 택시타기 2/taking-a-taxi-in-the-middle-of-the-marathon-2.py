@@ -12,7 +12,7 @@ distance = 100000000
 index = 1
 temp = 0
 x1, y1 = check_point[0]
-while index != (n-1):
+while index != n:
     for i, (x, y) in enumerate(check_point):
         if index == i:
             continue
