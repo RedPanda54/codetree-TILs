@@ -24,7 +24,7 @@ for x in range(B_a, B_c):
 min_x, min_y, max_x, max_y = 2001, 2001, 0, 0
 for x in range(A_a, A_c):
     for y in range(A_b, A_d):
-        if area[x][y]:
+        if area[x][y] == 1:
             min_x = min(min_x, x)
             min_y = min(min_y, y)
             max_x = max(max_x, x)
