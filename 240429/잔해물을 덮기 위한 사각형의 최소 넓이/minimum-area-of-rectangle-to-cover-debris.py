@@ -30,4 +30,4 @@ for x in range(A_a, A_c):
             max_x = max(max_x, x)
             max_y = max(max_y, y)
 
-print((max_x-min_x+1) * (max_y-min_y+1))
+print((max_x-min_x+1) * (max_y-min_y+1)) if min_x, min_y, max_x, max_y != 2001, 2001, 0, 0 else 0
