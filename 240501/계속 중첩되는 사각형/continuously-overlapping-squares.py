@@ -17,13 +17,11 @@ for i in range(1, n+1):
 area = [[0] * 201 for _ in range(201)]
 
 for color, x1, y1, x2, y2 in rects:
-    if color == "R":
-        for x in range(x1, x2):
-            for y in range(y1, y2):
+    for x in range(x1, x2):
+        for y in range(y1, y2):
+            if color == "R":
                 area[x][y] = 0
-    else: # color == "B"
-        for x in range(x1, x2):
-            for y in range(y1, y2):
+            else: # color == "B"
                 area[x][y] = 1
 
 total_area = 0
