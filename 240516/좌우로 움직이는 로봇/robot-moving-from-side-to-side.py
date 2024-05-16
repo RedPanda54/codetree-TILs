@@ -34,8 +34,14 @@ dum = len(B) - length if len(A) <= len(B) else len(A) - length
 for i in range(1, length):
     if A[i-1] != B[i-1] and A[i] == B[i]:
         answer += 1
-for j in range(length, length + dum):
-    if A[length-1] == B[j]:
-        answer += 1
+
+if len(A) <= len(B):
+    for j in range(length, length + dum):
+        if A[-1] == B[j]:
+            answer += 1
+else:
+    for j in range(length, length + dum):
+        if B[-1] == A[j]:
+            answer += 1
 
 print(answer)
