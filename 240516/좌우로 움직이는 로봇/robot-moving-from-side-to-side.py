@@ -36,7 +36,7 @@ elif len(B) > len(A):
         B.append(B[i-1])
 
 answer = 0
-length = len(A) if len(A) >= len(B) else len(B)
+length = max(len(A), len(B))
 for i in range(1, length):
     if A[i-1] != B[i-1] and A[i] == B[i]:
         answer += 1
