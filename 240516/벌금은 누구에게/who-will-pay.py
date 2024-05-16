@@ -3,9 +3,9 @@ student = [0 for _ in range(n+1)]
 
 answer = -1
 for _ in range(m):
-    penalty = int(input())
-    student[penalty] += 1
-    if student[penalty] == k:
+    penalty_num = int(input())
+    student[penalty_num] += 1
+    if student[penalty_num] == k:
         answer = penalty
         break
 
