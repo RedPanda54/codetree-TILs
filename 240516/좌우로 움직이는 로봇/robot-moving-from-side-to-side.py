@@ -1,44 +1,37 @@
-A = [0]
-B = [0]
+MAX_T = 1000000
 
-a_pos = 0
-b_pos = 0
+# 변수 선언 및 입력
+n, m = tuple(map(int, input().split()))
+pos_a, pos_b = [0] * (MAX_T + 1), [0] * (MAX_T + 1)
 
-n, m = map(int, input().split())
-
+# A가 매 초마다 서있는 위치를 기록
+time_a = 1
 for _ in range(n):
-    time, dir = input().split()
-    time = int(time)
-    for _ in range(time):
-        if dir == 'R':
-            a_pos += 1
-            A.append(a_pos)
-        else:
-            a_pos -= 1
-            A.append(a_pos)
-            
+    t, d = tuple(input().split())
+    for _ in range(int(t)):
+        pos_a[time_a] = pos_a[time_a - 1] + (1 if d == 'R' else -1)
+        time_a += 1
+
+# B가 매 초마다 서있는 위치를 기록
+time_b = 1
 for _ in range(m):
-    time, dir = input().split()
-    time = int(time)
-    for _ in range(time):
-        if dir == 'R':
-            b_pos += 1
-            B.append(b_pos)
-        else:
-            b_pos -= 1
-            B.append(b_pos)
+    t, d = tuple(input().split())
+    for _ in range(int(t)):
+        pos_b[time_b] = pos_b[time_b - 1] + (1 if d == 'R' else -1)
+        time_b += 1
 
-if len(A) < len(B):
-    for i in range(len(A), len(B)):
-        A.append(A[-1])
-elif len(B) > len(A):
-    for i in range(len(B), len(A)):
-        B.append(B[-1])
+if time_a < time_b:
+	for i in range(time_a, time_b):
+		pos_a[i] = pos_a[i - 1]
+elif time_a > time_b:
+	for i in range(time_b, time_a):
+		pos_b[i] = pos_b[i - 1]
 
-answer = 0
-length = max(len(A), len(B))
-for i in range(1, length):
-    if A[i-1] != B[i-1] and A[i] == B[i]:
-        answer += 1
-
-print(answer)
+# 새롭게 만나는 횟수를 구합니다.
+cnt = 0
+time_max = max(time_a, time_b)
+for i in range(1, time_max):
+    if pos_a[i] == pos_b[i] and pos_a[i - 1] != pos_b[i - 1]:
+        cnt += 1
+        
+print(cnt)
