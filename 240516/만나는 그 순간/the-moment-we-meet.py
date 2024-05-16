@@ -32,3 +32,6 @@ for i in range(1, length):
     if A[i] == B[i]:
         print(i)
         break
+    if i == length:
+        if A[i] != B[i]:
+            print(-1)
