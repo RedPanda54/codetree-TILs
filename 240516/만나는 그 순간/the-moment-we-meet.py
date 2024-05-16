@@ -7,8 +7,7 @@ n, m = map(int, input().split())
 # For A
 for _ in range(n):
     dir, time = input().split()
-    time = int(time)
-    for _ in range(time):
+    for _ in range(int(time)):
         position = A[-1]
         if dir == 'R':
             A.append(position + 1)
@@ -18,15 +17,14 @@ for _ in range(n):
 # For B
 for _ in range(m):
     dir, time = input().split()
-    time = int(time)
-    for _ in range(time):
+    for _ in range(int(time)):
         position = B[-1]
         if dir == 'R':
             B.append(position + 1)
         else:
             B.append(position - 1)
 
-length = len(A) if len(A) >= len(B) else len(B)
+length = len(A) if len(A) < len(B) else len(B)
 
 for i in range(1, length):
     if A[i] == B[i]:
