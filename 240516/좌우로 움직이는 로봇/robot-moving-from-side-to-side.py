@@ -30,10 +30,10 @@ for _ in range(m):
 
 if len(A) < len(B):
     for i in range(len(A), len(B)):
-        A.append(A[i-1])
+        A.append(A[-1])
 elif len(B) > len(A):
     for i in range(len(B), len(A)):
-        B.append(B[i-1])
+        B.append(B[-1])
 
 answer = 0
 length = max(len(A), len(B))
