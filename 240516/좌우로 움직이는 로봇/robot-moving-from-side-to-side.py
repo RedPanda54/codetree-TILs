@@ -28,20 +28,17 @@ for _ in range(m):
             b_pos -= 1
             B.append(b_pos)
 
+if len(A) < len(B):
+    for i in range(len(A), len(B)):
+        A.append(A[i-1])
+elif len(B) > len(A):
+    for i in range(len(B), len(A)):
+        B.append(B[i-1])
+
 answer = 0
-length = len(A) if len(A) <= len(B) else len(B)
-dum = len(B) - length if len(A) <= len(B) else len(A) - length
+length = len(A) if len(A) >= len(B) else len(B)
 for i in range(1, length):
     if A[i-1] != B[i-1] and A[i] == B[i]:
         answer += 1
-
-if len(A) <= len(B):
-    for j in range(length, length + dum):
-        if A[-1] == B[j]:
-            answer += 1
-else:
-    for j in range(length, length + dum):
-        if B[-1] == A[j]:
-            answer += 1
 
 print(answer)
