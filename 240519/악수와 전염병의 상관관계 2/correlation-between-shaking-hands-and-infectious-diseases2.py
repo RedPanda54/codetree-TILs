@@ -13,10 +13,8 @@ for t, x, y in infos:
     if people[x] == 1 and handshake[x] < K:
         people[y] = 1
         handshake[x] += 1
-        handshake[y] += 1
     elif people[y] == 1 and handshake[y] < K:
         people[x] = 1
-        handshake[x] += 1
         handshake[y] += 1
     elif people[x] == 1 and people[y] == 1:
         handshake[x] += 1
