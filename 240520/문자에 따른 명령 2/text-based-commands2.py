@@ -7,15 +7,9 @@ str = input()
 commands = list(str)
 for command in commands:
     if command == 'L':
-        if stare == 0:
-            stare = 3
-        else:
-            stare -= 1
+        stare = (stare - 1 + 4) % 4
     elif command == 'R':
-        if stare == 3:
-            stare = 0
-        else:
-            stare += 1
+        stare = (stare + 1) % 4
     else:
         x += dir[stare][0]
         y += dir[stare][1]
