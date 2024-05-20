@@ -16,10 +16,8 @@ for _ in range(n):
         dx, dy = dir[2]
     else: # str == 'N'
         dx, dy = dir[3]
-    
-    dx *= distance
-    dy *= distance
-    x += dx
-    y += dy
+
+    x += dx * distance
+    y += dy * distance
 
 print(x, y)
