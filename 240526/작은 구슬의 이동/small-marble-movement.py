@@ -12,8 +12,8 @@ for i in range(1, n+1):
 dir = [(0, 1), (1, 0), (-1, 0), (0, -1)]
 dir_dic = {
     'R': 0,
-    'U': 1,
-    'D': 2,
+    'U': 2,
+    'D': 1,
     'L': 3
 }
 dir_num = dir_dic[d]
