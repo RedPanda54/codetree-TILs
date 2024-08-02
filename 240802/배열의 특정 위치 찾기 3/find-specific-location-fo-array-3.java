@@ -13,7 +13,14 @@ public class Main {
                 break;
             }
         }
-
-        System.out.print(arr[temp - 1] + arr[temp - 2] + arr[temp - 3]);
+        if (temp >= 3) {
+            System.out.print(arr[temp - 1] + arr[temp - 2] + arr[temp - 3]);   
+        } else if (temp == 2) {
+            System.out.print(arr[temp - 1] + arr[temp - 2]);
+        } else if (temp == 1) {
+            System.out.print(arr[temp - 1]);
+        } else {
+            System.out.print(0);
+        }
     }
 }
