@@ -8,7 +8,7 @@ public class Main {
 
         for (int i=0; i<n; i++) {
             arr[i] = input.nextInt();
-            arr[i] = arr[i] * arr[i];
+            arr[i] = (int) Math.pow(arr[i], 2);
         }
 
         for (int i=0; i<n; i++)
