@@ -6,7 +6,8 @@ public class Main {
         int n = input.nextInt();
         int[] arr = new int[n];
         
-        int minValue = 2147483647;
+        // int 타입의 최대값 표현.
+        int minValue = Integer.MAX_VALUE;
         for (int i=0; i<n; i++) {
             arr[i] = input.nextInt();
             if (arr[i] < minValue) {
