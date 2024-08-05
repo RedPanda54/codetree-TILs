@@ -32,6 +32,8 @@ public class Main {
         }
 
         for (int i = 0; i < B.length; i++) {
+            if (idx == -1)
+                break;
             if (A[idx] != B[i]) {
                 idx = -1;
                 break;
