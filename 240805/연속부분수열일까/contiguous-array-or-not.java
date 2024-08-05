@@ -3,47 +3,47 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        // 수열 A
+        // n1과 n2를 입력받음
         int n1 = input.nextInt();
-        int[] A = new int[n1];
-
-        // 수열 B
         int n2 = input.nextInt();
-        int[] B = new int[n2];
 
-        for (int i = 0; i < n1; i++) {
+        // 수열 A와 B
+        int[] A = new int[n1];
+        for (int i = 0; i < A.length; i++) {
             A[i] = input.nextInt();
         }
 
-        for (int i = 0; i < n2; i++) {
+        int[] B = new int[n2];
+        for (int i = 0; i < B.length; i++) {
             B[i] = input.nextInt();
         }
 
+        // 연속부분수열 확인
         String answer = "";
 
-        int index = -1;
+        int idx = -1;
         int tmp = B[0];
+
         for (int i = 0; i < A.length; i++) {
             if (A[i] == tmp) {
-                index = i;
+                idx = i;
                 break;
             }
         }
 
         for (int i = 0; i < B.length; i++) {
-            if (index == -1)
-                break;
-            if (A[index] != B[i]) {
-                answer = "No";
+            if (A[idx] != B[i]) {
+                idx = -1;
                 break;
             }
-            index++;
+            idx++;
         }
 
-        if (index == -1) {
+        if (idx == -1)
             answer = "No";
-        }
+        else
+            answer = "Yes";
 
-        System.out.println(answer);
+        System.out.print(answer);
     }
 }
