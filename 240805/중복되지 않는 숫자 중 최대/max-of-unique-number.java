@@ -25,8 +25,13 @@ public class Main {
             counting[value]++;
         }
         input.close();
-        
+
         while (true) {
+            if (maxValue == 0) {
+                System.out.print(-1);
+                break;
+            }
+
             if (counting[maxValue] == 1) {
                 System.out.print(maxValue);
                 break;
