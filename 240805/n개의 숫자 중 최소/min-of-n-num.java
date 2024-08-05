@@ -6,7 +6,7 @@ public class Main {
         int n = input.nextInt();
         int[] arr = new int[n];
         
-        int minValue = 101;
+        int minValue = 4294967295;
         for (int i=0; i<n; i++) {
             arr[i] = input.nextInt();
             if (arr[i] < minValue) {
