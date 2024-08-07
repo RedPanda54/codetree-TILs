@@ -18,7 +18,7 @@ public class Main {
             for (int j = 0; j < 4; j++) {
                 widAverage += arr[i][j];
             }
-            System.out.print(widAverage / 4 + " ");
+            System.out.printf("%.1f ", widAverage / 4);
             widAverage = 0.0;
         }
 
@@ -28,16 +28,16 @@ public class Main {
             for (int j = 0; j < 2; j++) {
                 heiAverage += arr[j][i];
             }
-            System.out.print(heiAverage / 2 + " ");
+            System.out.printf("%.1f ", heiAverage / 2);
             heiAverage = 0.0;
         }
-        
+
         System.out.println();
 
         for (int i = 0; i < 2; i++)
             for (int j = 0; j < 4; j++)
                 average += arr[i][j];
-        
-        System.out.print(average / 8);
+
+        System.out.printf("%.1f", average / 8);
     }
 }
