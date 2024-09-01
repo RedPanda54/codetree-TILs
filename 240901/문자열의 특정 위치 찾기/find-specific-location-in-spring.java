@@ -14,7 +14,10 @@ public class Main {
             }
         }
 
-        System.out.print(idx);
+        if (idx != 0)
+            System.out.print(idx);
+        else 
+            System.out.print("No");
         input.close();
     }
 }
