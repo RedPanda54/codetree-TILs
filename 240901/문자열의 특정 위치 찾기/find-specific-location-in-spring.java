@@ -6,7 +6,7 @@ public class Main {
         String str = input.next();
         char temp = input.next().charAt(0);
 
-        int idx = 0;
+        int idx = -1;
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == temp) {
                 idx = i;
@@ -14,7 +14,7 @@ public class Main {
             }
         }
 
-        if (idx != 0)
+        if (idx != -1)
             System.out.print(idx);
         else 
             System.out.print("No");
