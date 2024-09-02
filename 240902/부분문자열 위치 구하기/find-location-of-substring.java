@@ -7,9 +7,10 @@ public class Main {
         String goal = input.next();
 
         int idx = -1;
-        for (int i = 0; i < str.length() - 1; i++) {
-            if (str.substring(i, i + 2).equals(goal)) {
+        for (int i = 0; i <= str.length() - goal.length(); i++) {
+            if (str.substring(i, i + goal.length()).equals(goal)) {
                 idx = i;
+                break;
             }
         }
 
