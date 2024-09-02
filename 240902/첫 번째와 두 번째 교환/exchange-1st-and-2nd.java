@@ -7,17 +7,18 @@ public class Main {
         char first = str.charAt(0);
         char second = str.charAt(1);
 
-        String result = "";
-        for (int i = 0; i < str.length(); i++) {
+        StringBuilder result = new StringBuilder(str);
+        for (int i = 0; i < result.length(); i++) {
             if (str.charAt(i) == first)
-                result += second;
+                result.setCharAt(i, second);
             else if (str.charAt(i) == second)
-                result += first;
-            else
-                result += str.charAt(i);
+                result.setCharAt(i, first);
+            else 
+                result.setCharAt(i, str.charAt(i));
         }
-        
-        System.out.print(result);
+
+        System.out.println(result.toString());
+
 
         input.close();
     }
