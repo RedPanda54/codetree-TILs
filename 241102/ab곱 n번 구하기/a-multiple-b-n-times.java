@@ -9,11 +9,12 @@ public class Main {
         for (int i = 0; i < n; i++) {
             int a = input.nextInt();
             int b = input.nextInt();
+            temp = 1;
+            
             for (int j = a; j <= b; j++) {
                 temp *= j;
             }
-            System.out.print(temp + "\n");
-            temp = 1;
+            System.out.println(temp);
         }
         input.close();
     }
