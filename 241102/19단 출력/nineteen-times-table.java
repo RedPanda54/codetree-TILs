@@ -10,7 +10,7 @@ public class Main {
                 if (j % 2 == 0) {
                     System.out.printf("%d * %d = %d\n", i, j, (i * j));
                 }
-                else if (i == 19 || j == 19) {
+                else if (j == 19) {
                     System.out.printf("%d * %d = %d\n", i, j, (i * j));
                 }
                 else {
